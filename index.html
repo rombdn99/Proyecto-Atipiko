@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Atipiko Web Store</title>
+		<meta name="description" content="Atipiko es una tienda de productos poco usuales, llevan operando por años en el centro de Barcelona y han decidido dar su paso al mundo virtual." />
+  		<meta name="author" content="Raul Osuna Montes" />
+  		<style type="text/css">
+  			*{
+  				padding: 0;
+  				margin: 0;
+  			}
+  			figure>img{
+  				width: 100%;
+  			}
+  			header,nav{
+  				background-color: #f0f0f0
+  			}
+  			header{
+  				display: grid;
+  				grid-template-columns: 20% 20%;
+  				justify-content: space-between;
+  				flex-flow: row;
+  				
+  			}
+  			header>section{
+  				display: flex;
+  				justify-content: center;
+  				align-items: center;
+  			}
+  			header>section>article{
+  				padding: 1vh 1vw 1vh 1vw
+  			}
+  			header>section>article:nth-of-type(2){
+  				border-left: 1px solid #000;
+  				border-right: 1px solid #000;
+  			}
+  			header>h1{
+  				grid-area: 2/1/3/3;
+  				text-align: center;
+  				background-color: #fff;
+  				padding: 4vh 0;
+  			}
+  			nav>h3{
+  			}
+  			
+  			nav>ul{
+  				display: flex;
+  				list-style: none;
+  				justify-content: space-around;
+  			}
+  			main{
+  				padding: 5vh 0%;
+  			}
+  			main>section:first-of-type{
+  				position: relative;
+  				padding: 0 0%;
+  				width: 100%;
+  				height: 50vh;
+  			}
+  			main>section:first-of-type>div{
+  				width: 100%;
+  				height: 100%;
+  				position: relative;
+  				overflow: hidden;
+  			}
+  			main>section:first-of-type>div>article{
+  				width: 100%;
+  				height: 100%;
+  				position: absolute;
+  				background-color: red;
+  				transition: left 1s ease;
+  			}
+  			main>section:first-of-type>button{
+  				position: absolute;
+    			bottom: 50%;
+    			padding: 1%;
+    			background-color: rgba(0,0,0,0.5);
+    			border: none;
+    			outline: none;
+    			color:#fff;
+    			transition: 0.5s
+    		}
+    		main>section:first-of-type>button:hover{
+    			cursor: pointer;
+    			background-color: rgba(255,255,255,0.5);
+    			color: #000
+    		}
+    		main>section:first-of-type>button:first-of-type{
+    			left: 0%;
+    		}
+    		main>section:first-of-type>button:last-of-type{
+    			right: 0%;
+    		}
+    		main>section:not(:first-of-type){
+    			padding: 5vh 5vw;
+    		}
+    		main>section:nth-of-type(2)>section{
+    			display: grid;
+    			grid-template-columns: auto auto auto auto;
+    			justify-content: space-around;
+    		}
+    		main>section:nth-of-type(2)>section>a{
+    			text-decoration: none;
+    			color: #000;
+    			margin: 2%;
+    		}
+
+    		footer{
+    			background-color: #000;
+    			padding: 5vh;
+    		}
+    		footer>section{
+    			display: flex;
+    			justify-content: space-between;
+    			align-items: center;
+    			padding: 0 20%;
+    		}
+    		footer>section>a{
+    			padding: 1%;
+    			background-color: #fff;
+    			border-radius: 100%;
+    			width: 5%;
+    			border: 1px solid #fff;
+    			transition: 1s ease;
+    		}
+    		footer>section>a:hover{
+    			background-color: #000;
+    		}
+    		footer>section>a>figure>img{
+    			transition: 1s ease
+    		}
+    		footer>section>a:hover>figure>img{
+    			filter: invert(1);
+    		}
+  		</style>
+	</head>
+	<body>
+		<header>
+			<section>
+				<!-- infode pagina y buscador -->
+				<article>entrega</article>
+				<article>envio</article>
+				<article>lupa</article>
+			</section>
+			<section>
+				<!-- usuario, cambio de idioma y carro -->
+				<article>user</article>
+				<article>carro</article>
+				<article>Lang</article>
+			</section>
+			<h1>
+				Atipiko
+				<!-- Nombre de la empresa -->
+			</h1>
+		</header>
+		<nav>
+			<h3>Productos Personalizados <sup>new</sup>
+				<!-- titulo del nav -->
+			</h3>
+			<ul>
+				<!-- menu -->
+				<li>Regalos</li>
+				<li>Camisetas</li>
+				<li>Zapatillas</li>
+			</ul>
+			<h5></h5>
+		</nav>
+		<main>
+			<section id="slider">
+				<!-- Slider imagenes -->
+				<div>
+					<article>
+						<h1>1</h1>
+					</article>
+					<article>
+						<h1>2</h1>
+					</article>
+					<article>
+						<h1>3</h1>
+					</article>
+					<article>
+						<h1>4</h1>
+					</article>
+				</div>
+				<button onclick="slidercambio(false)"><</button>
+				<button onclick="slidercambio(true)">></button>
+			</section>
+			<section>
+				<!-- mostrar productos destacados y esas mierdas -->
+				<h2>Productos Destacados</h2>
+				<section>
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+				</section>
+			</section>
+		</main>
+		<footer>
+			<section>
+				<a href="https://www.facebook.com/">
+					<figure>
+						<img src="img/facebook.svg">
+					</figure>
+				</a>
+				<a href="https://www.twitter.com/">
+					<figure>
+						<img src="img/twitter.svg">
+					</figure>
+				<a href="https://www.instagram.com/">
+					<figure>
+						<img src="img/insta.svg">
+					</figure>
+				</a>
+			</section>
+			<section>
+				
+			</section>
+		</footer>
+		<script type="text/javascript">
+			cambiarzindex();
+			function cambiarzindex(){
+				 console.log(slider.children[0].children.length)
+				 slider.children[0].children[0].style.left="0%";
+				 for (let i=1;i<slider.children[0].children.length;i++){
+				 	slider.children[0].children[i].style.left="100%";
+				 }
+
+			}
+			function slidercambio(lado){
+				if(lado){
+					console.log(">")
+					if(document.querySelector("main>section:first-of-type>div>article:last-of-type").style.left!="0%"){
+						var ultimo=0;
+						for (let i=0;i<slider.children[0].children.length;i++){
+							console.log(slider.children[0].children[i])
+							slider.children[0].children[i].style.left=(parseInt(slider.children[0].children[i].style.left.split('%')[0])-100)+"%";
+						}
+						// if(document.querySelector("main>section:first-of-type>div>article:last-of-type").style.left=="0%"){
+							console.log("aaaa")
+						// }
+					}else{
+						for (let i=0;i<slider.children[0].children.length;i++){
+							slider.children[0].children[i].style.left=(100*parseInt(i))+"%"
+						}
+					}
+				}else{
+					console.log("<");
+					if(document.querySelector("main>section:first-of-type>div>article:first-of-type").style.left!="0%"){
+						for (let i=0;i<slider.children[0].children.length;i++){
+							console.log(slider.children[0].children[i])
+							slider.children[0].children[i].style.left=(parseInt(slider.children[0].children[i].style.left.split('%')[0])+100)+"%"
+						}
+					}else{
+						var cont=0;
+						for (let i=slider.children[0].children.length-1;i>=0;i--){
+							console.log(i)
+							slider.children[0].children[i].style.left=(100*parseInt(cont)*-1)+"%";
+							cont++;
+						}
+					}
+					
+
+				}
+			}
+			function slidermov1(elemento){
+				elemento.style.transition="left 0s ease 0s";
+				elemento.style.left="100%";
+				return true;
+			}
+		</script>
+	</body>
+</html>
