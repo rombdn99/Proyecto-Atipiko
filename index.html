@@ -69,8 +69,18 @@
   				width: 100%;
   				height: 100%;
   				position: absolute;
-  				background-color: red;
   				transition: left 1s ease;
+  				background-repeat: no-repeat;
+  				background-size: 100% 100%;
+  			}
+  			main>section:first-of-type>div>article:first-of-type{
+  				background-image: url("img/banner1.png");
+  			}
+  			main>section:first-of-type>div>article:nth-of-type(2){
+  				background-image: url("img/banner2.png");
+  			}
+  			main>section:first-of-type>div>article:nth-of-type(3){
+  				background-image: url("img/banner3.png");
   			}
   			main>section:first-of-type>button{
   				position: absolute;
@@ -96,17 +106,40 @@
     		main>section:not(:first-of-type){
     			padding: 5vh 5vw;
     		}
-    		main>section:nth-of-type(2)>section{
+    		main>section:nth-of-type(2){
     			display: grid;
-    			grid-template-columns: auto auto auto auto;
+    			grid-template-columns: auto auto auto;
+    		}
+    		main>section:nth-of-type(2)>article{
+    			height: 50vh;
+    			background-repeat: no-repeat;
+    			background-size: 110% 110%;
+    			background-attachment: fixed;
+    			background-position: center;
+    		}
+			main>section:nth-of-type(2)>article:first-of-type{
+    			background-image: url("img/banner2.png");
+			}
+			main>section:nth-of-type(2)>article:nth-of-type(2){
+    			background-image: url("img/banner1.png");
+			}
+			main>section:nth-of-type(2)>article:last-of-type{
+    			background-image: url("img/banner3.png");
+			}
+    		main>section:nth-of-type(3)>section{
+    			display: grid;
+    			grid-template-columns: 20% 20% 20% 20%;
     			justify-content: space-around;
     		}
-    		main>section:nth-of-type(2)>section>a{
+    		main>section:nth-of-type(3)>section>a{
     			text-decoration: none;
     			color: #000;
     			margin: 2%;
+    			transition: 0.5s ease
     		}
-
+    		main>section:nth-of-type(3)>section>a:hover{
+    			transform: scale(1.1);
+    		}
     		footer{
     			background-color: #000;
     			padding: 5vh;
@@ -161,9 +194,9 @@
 			</h3>
 			<ul>
 				<!-- menu -->
-				<li>Regalos</li>
-				<li>Camisetas</li>
-				<li>Zapatillas</li>
+				<li><a href="prueba.html?cat=2">Regalos</a></li>
+				<li><a href="prueba.html?cat=0">Camisetas</a></li>
+				<li><a href="prueba.html?cat=1">Zapatillas</a></li>
 			</ul>
 			<h5></h5>
 		</nav>
@@ -172,31 +205,36 @@
 				<!-- Slider imagenes -->
 				<div>
 					<article>
-						<h1>1</h1>
 					</article>
 					<article>
-						<h1>2</h1>
 					</article>
 					<article>
-						<h1>3</h1>
 					</article>
-					<article>
-						<h1>4</h1>
-					</article>
+					
 				</div>
 				<button onclick="slidercambio(false)"><</button>
 				<button onclick="slidercambio(true)">></button>
 			</section>
 			<section>
+				<!-- <article>
+					<h3>Regalos</h3>
+				</article>
+				<article>
+					<h3>Regalos</h3>
+				</article>
+				<article>
+					<h3>Regalos</h3>
+				</article> -->
+			</section>
+			<section>
 				<!-- mostrar productos destacados y esas mierdas -->
-				<h2>Productos Destacados</h2>
+				<h2>Productos que podrian interesarte</h2>
 				<section>
 					<a href="#">
 						<figure>
 							<img src="img/imagenprueba.jpg">
 						</figure>
 						<p>Nombre de cosa</p>
-						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
 						<p>100,00€</p>
 					</a>
 					<a href="#">
@@ -204,7 +242,6 @@
 							<img src="img/imagenprueba.jpg">
 						</figure>
 						<p>Nombre de cosa</p>
-						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
 						<p>100,00€</p>
 					</a>
 					<a href="#">
@@ -212,7 +249,6 @@
 							<img src="img/imagenprueba.jpg">
 						</figure>
 						<p>Nombre de cosa</p>
-						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
 						<p>100,00€</p>
 					</a>
 					<a href="#">
@@ -220,7 +256,6 @@
 							<img src="img/imagenprueba.jpg">
 						</figure>
 						<p>Nombre de cosa</p>
-						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
 						<p>100,00€</p>
 					</a>
 					<a href="#">
@@ -228,7 +263,6 @@
 							<img src="img/imagenprueba.jpg">
 						</figure>
 						<p>Nombre de cosa</p>
-						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
 						<p>100,00€</p>
 					</a>
 					<a href="#">
@@ -236,7 +270,6 @@
 							<img src="img/imagenprueba.jpg">
 						</figure>
 						<p>Nombre de cosa</p>
-						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
 						<p>100,00€</p>
 					</a>
 				</section>
@@ -263,9 +296,17 @@
 				
 			</section>
 		</footer>
+		<script type="text/javascript" src="jsgeneral.js"></script>
 		<script type="text/javascript">
-			cambiarzindex();
-			function cambiarzindex(){
+			sliderinicial();
+			destacados();
+
+			/*
+				Recibe: Nada
+				Devuelve: Nada
+				Accion: Coloca los elementos del Slider en la posicion inicial
+			*/
+			function sliderinicial(){
 				 console.log(slider.children[0].children.length)
 				 slider.children[0].children[0].style.left="0%";
 				 for (let i=1;i<slider.children[0].children.length;i++){
@@ -273,6 +314,11 @@
 				 }
 
 			}
+			/*
+				Recibe: Lado a donde rotar (Boleano)
+				Devuelve: Nada
+				Accion: Rota los elementos del slider dependiendo del boelano recibido
+			*/
 			function slidercambio(lado){
 				if(lado){
 					console.log(">")
@@ -309,10 +355,45 @@
 
 				}
 			}
-			function slidermov1(elemento){
-				elemento.style.transition="left 0s ease 0s";
-				elemento.style.left="100%";
-				return true;
+			/*
+				Recibe: Nada
+				Devuelve: Nada
+				Accion: Coloca 4 productos, alazar, guardados en un array de productos
+			*/
+			function destacados(){
+				/* plantilla
+					<a href="#">
+						<figure>
+							<img src="img/imagenprueba.jpg">
+						</figure>
+						<p>Nombre de cosa</p>
+						<p>descripcion descripcion descripcion descripcion descripcion descripciondescripcion descripcion descripcion</p>
+						<p>100,00€</p>
+					</a>
+				*/
+				var categoria=parseInt(aleatorio(productos.length-1,0))
+				var productorandom=parseInt(aleatorio(productos[categoria].length-1,0))
+				console.log(productos[categoria][productorandom])
+				var html="";
+				var echos=[];
+				 for(let i=0;i<8;i++){
+				 	do{
+				 		console.log(echos)
+					 	categoria=parseInt(aleatorio(productos.length-1,0))
+					 	productorandom=parseInt(aleatorio(productos[categoria].length-1,0))
+					}while(echos.indexOf(categoria+" "+productorandom)!=-1);
+					echos.push(categoria+" "+productorandom)
+				 	html+="<a href='#'>";
+				 	html+="<figure>";
+				 	html+="<img src='"+productos[categoria][productorandom][0]+"' alt='"+productos[categoria][productorandom][1]+"' title='"+productos[categoria][productorandom][1]+"'>";
+				 	html+="</figure>";
+				 	html+="<h4>"+productos[categoria][productorandom][1]+"</h4>";
+				 	html+="<p>"+productos[categoria][productorandom][2]+"€</p>";
+				 	html+="</a>";
+
+				 }
+				 console.log(document.querySelector("main>section:nth-of-type(3)>section"))
+				 document.querySelector("main>section:nth-of-type(3)>section").innerHTML=html;
 			}
 		</script>
 	</body>
