@@ -65,6 +65,12 @@ function getParameterByName(name) {
 
 function creacionMenu(){
 	var navegador=document.body.children[1].firstElementChild;
+	var index= document.createElement("li");
+	var indexenlace=document.createElement("a");
+	indexenlace.innerHTML="Regalos";
+	index.appendChild(indexenlace);
+	indexenlace.href="index.html";
+
 	var regalos= document.createElement("li");
 	var regalosenlace=document.createElement("a");
 	regalosenlace.innerHTML="Regalos";
