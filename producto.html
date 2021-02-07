@@ -8,17 +8,41 @@
 		<meta name="author" content="Raul Osuna Montes" />
 		<link rel="stylesheet" href="general.css">  
   		<style type="text/css">
-  			
-  			main{
-  				padding: 5vh 0%;
-  			}
   			main{
   				display: grid;
-  				grid-template-columns: auto auto ;
-  			}
-    		main>h2{
-
-    		}
+  				grid-template-columns: 50% auto;
+			  }
+			main>section{
+				padding: 0 2%;
+				display: grid;
+				grid-template-columns: 100%;
+				flex-flow: column;
+				align-items: center;
+			}
+			
+    		main>section>article:last-of-type>ul{
+				display: grid;
+				grid-template-columns: repeat(10,10%);
+				width: 100%;
+			}
+			main>section>article:last-of-type>ul>li{
+				text-align: center;
+				padding: 1%;
+				background-color: #fff;
+				border: 1px solid #000;
+				min-width: fit-content;
+			}
+			@media screen and (max-width: 650px){
+				main{
+					grid-template-columns: auto;
+				}
+				main>section>article:last-of-type>ul{
+					display: grid;
+					grid-template-columns: repeat(7,14.29%);
+					width: 100%;
+				}
+				
+			}
   		</style>
 	</head>
 	<body>
@@ -31,14 +55,7 @@
 		<nav>
 <!-- 			<h3>Productos Personalizados <sup>new</sup>
  -->				<!-- titulo del nav -->
-			</h3>
-			<ul>
-				<!-- menu -->
-				<!-- <li><a href="prueba.html?cat=3">Regalos</a></li>
-				<li><a href="prueba.html?cat=1">Camisetas</a></li>
-				<li><a href="prueba.html?cat=2">Zapatillas</a></li> -->
-			</ul>
-			<h5></h5>
+			
 		</nav>
 		<main>
 			
@@ -78,18 +95,23 @@
 			function catalogo(){
 				var principal=document.querySelector("main");
 				var seccion=document.createElement("section");
+				var articulo1=document.createElement("article");
+				var articulo2=document.createElement("article");
 				var titulo=document.createElement("h2");				
 				var figura=document.createElement("figure");
 				var imagen=document.createElement("img");
 				var precio=document.createElement("h3");
 
 				figura.appendChild(imagen);
-				seccion.appendChild(titulo);
-				seccion.appendChild(figura);
-				seccion.appendChild(precio);
+				articulo1.appendChild(titulo);
+				seccion.appendChild(articulo1);
+				seccion.appendChild(articulo2);
+
+				articulo1.appendChild(precio);
+				
 				principal.appendChild(figura);
 				principal.appendChild(seccion);
-
+				
 				// si tiene tallas
 				if(productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))].length>3){
 					var tallas=document.createElement("ul");
@@ -101,15 +123,15 @@
 					}
 					var titulotallas=document.createElement("h4");
 
-					seccion.appendChild(titulotallas)
-					seccion.appendChild(tallas);
+					articulo2.appendChild(titulotallas)
+					articulo2.appendChild(tallas);
 					titulotallas.innerHTML="Tallas disponibles";
 				}
 
 				imagen.src=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][0];
 				imagen.alt=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][1];
 				imagen.title=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][1];
-			 	precio.innerHTML=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][2];
+			 	precio.innerHTML=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][2].toFixed(2)+"€";
 				titulo.innerHTML=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][1]
 				
 

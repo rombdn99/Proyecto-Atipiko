@@ -8,19 +8,13 @@
 		<meta name="author" content="Raul Osuna Montes" />
 		<link rel="stylesheet" href="general.css">  
   		<style type="text/css">
-  			main{
-  				padding: 5vh 0%;
-  			}
-  			main>section{
-  				display: grid;
-  				grid-template-columns: auto auto auto auto;
-  			}
-  			main>section {
+  			
+			main>section{
     			display: grid;
     			grid-template-columns: 20% 20% 20% 20%;
     			justify-content: space-around;
     		}
-    		main>section >a{
+    		main>section>a{
     			text-decoration: none;
     			color: #000;
     			margin: 2%;
@@ -28,46 +22,78 @@
 				background-color: #fff;
 				text-transform: uppercase;
 			}
-			main>section >a>figure{
+			main>section>a>figure{
 				height: 100%;
-				border-bottom: 1px solid #000;
 			}
 			/* Pruebas */
-			main>section >a>h4,main>section >a>p{
-				padding: 5% 5% 0 5%;
-				text-align: center;
-
+			main>section>a p{
+				padding: 0% 5% 0 5%; 
 			}
-			/* main>section >a:first-of-type>h4{
-				text-align: center;
-			} */
-			main>section >a>p{
+			main>section>a h4{
+				text-align: left;
+				width: 90%;
+   				height: 50%;
+				padding: 2%;
+			} 
+			main>section>a p{
+				text-align: right;
+			} 
+			main>section>a p{
 				color: #f00;
 				font-weight: bold;
-			}
+				margin-top: -3%;
 
-			main>section >a{
-				display: grid;
-				grid-template-columns: 75% 25%;
-				justify-content: center;
-				align-items: center;
+			}
+			main>section>a{
 				border: 1px solid black;
 				border-radius: 10px;
 				overflow: hidden;
 				filter: drop-shadow(2px 4px 6px black);
 			}
 
-			main>section >a>figure{
+			main>section>a>figure{
 				grid-column: 1/3;
 			}
 			/* Fin pruebas */
-			main>section >a>figure>img{
-				height: 100%;
+			main>section>a>figure>img{
+				height: 70%;
+				border-bottom: 1px solid #000;
+				box-sizing: border-box;
+
 			}
-    		main>section >a:hover{
+			main>section>a>figure>figcaption{
+				height: 30%;
+				display: flex;
+				flex-flow: column;
+				justify-content: space-between;
+			}
+    		main>section>a:hover{
     			transform: scale(1.1);
     			z-index: 100
-    		}
+			}
+			@media screen and (max-width: 1100px){
+				main>section{
+					grid-template-columns: 33% auto 33% ;
+    			}
+			}
+			@media screen and (max-width: 500px){
+				main>section{
+					grid-template-columns: 50% auto ;
+				}
+				main>section>a>figure{
+					height: initial;
+				}
+				main>section>a>figure>img{
+					height: initial;
+				}
+				main>section>a>figure>figcaption{
+					height: initial;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+				}
+			}
+				
   		</style>
 	</head>
 	<body>
@@ -78,16 +104,7 @@
 			</h1>
 		</header>
 		<nav>
-			<!-- <h3>Productos Personalizados <sup>new</sup> -->
-				<!-- titulo del nav -->
-			<!-- </h3> -->
-			<ul>
-				<!-- menu -->
-				<!-- <li><a href="prueba.html?cat=2">Regalos</a></li>
-				<li><a href="prueba.html?cat=0">Camisetas</a></li>
-				<li><a href="prueba.html?cat=1">Zapatillas</a></li> -->
-			</ul>
-			<h5></h5>
+			
 		</nav>
 		<main>
 			
@@ -144,17 +161,20 @@
 				var imagen;
 				var nombre;
 				var precio;
+				var des;
 				console.log(productos[parseInt(getParameterByName("cat"))])
 				for(let i=0;i<productos[parseInt(getParameterByName("cat"))].length;i++){
 					enlace=document.createElement("a");
 					figura=document.createElement("figure");
 					imagen=document.createElement("img");
+					des	  =document.createElement("figcaption");
 					nombre=document.createElement("h4");
 					precio=document.createElement("p");
 					figura.appendChild(imagen);
 					enlace.appendChild(figura);
-					enlace.appendChild(nombre);
-					enlace.appendChild(precio);
+					des.appendChild(nombre);
+					des.appendChild(precio);
+					figura.appendChild(des)
 					enlace.href="producto.html?cat="+parseInt(getParameterByName("cat"))+"&pro="+i;
 					imagen.src=productos[parseInt(getParameterByName("cat"))][i][0];
 					imagen.alt=productos[parseInt(getParameterByName("cat"))][i][1];
