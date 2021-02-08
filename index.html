@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Atipiko Web Store</title>
+		<title>Atipiko</title>
 		<meta name="description" content="Atipiko es una tienda de productos poco usuales, llevan operando por años en el centro de Barcelona y han decidido dar su paso al mundo virtual." />
 		<meta name="author" content="Raul Osuna Montes" />
 		<link rel="stylesheet" href="general.css">  
@@ -103,26 +103,27 @@
 				height: 100%;
 			}
 			/* Pruebas */
-			main>section:nth-of-type(3)>section>a h4,main>section:nth-of-type(3)>section>a p{
+			main>section:nth-of-type(3)>section>a p{
 				padding: 0% 5% 0 5%; 
 			}
 			main>section:nth-of-type(3)>section>a h4{
 				text-align: left;
 				width: 90%;
    				height: 50%;
+				padding: 2%;
 			} 
 			main>section:nth-of-type(3)>section>a p{
 				text-align: right;
-			} 
-			main>section:nth-of-type(3)>section>a p{
 				color: #f00;
 				font-weight: bold;
+				margin-top: -3%;
 			}
 			main>section:nth-of-type(3)>section>a{
 				border: 1px solid black;
 				border-radius: 10px;
 				overflow: hidden;
 				filter: drop-shadow(2px 4px 6px black);
+				margin-bottom: 5%;
 			}
 
 			main>section:nth-of-type(3)>section>a>figure{
@@ -130,13 +131,16 @@
 			}
 			/* Fin pruebas */
 			main>section:nth-of-type(3)>section>a>figure>img{
-				height: 80%;
+				height: 70%;
 				border-bottom: 1px solid #000;
 				box-sizing: border-box;
 
 			}
 			main>section:nth-of-type(3)>section>a>figure>figcaption{
-				height: 20%;
+				height: 30%;
+				display: flex;
+				flex-flow: column;
+				justify-content: space-between;
 			}
     		main>section:nth-of-type(3)>section>a:hover{
     			transform: scale(1.1);

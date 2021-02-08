@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Atipiko Web Store</title>
+		<title>Atipiko</title>
 		<meta name="description" content="Atipiko es una tienda de productos poco usuales, llevan operando por años en el centro de Barcelona y han decidido dar su paso al mundo virtual." />
 		<meta name="author" content="Raul Osuna Montes" />
 		<link rel="stylesheet" href="general.css">  
@@ -37,8 +37,6 @@
 			} 
 			main>section>a p{
 				text-align: right;
-			} 
-			main>section>a p{
 				color: #f00;
 				font-weight: bold;
 				margin-top: -3%;
@@ -49,6 +47,7 @@
 				border-radius: 10px;
 				overflow: hidden;
 				filter: drop-shadow(2px 4px 6px black);
+				margin-bottom: 5%;
 			}
 
 			main>section>a>figure{
@@ -144,12 +143,15 @@
 				switch(parseInt(getParameterByName("cat"))){
 					case 0:
 						titulo.innerHTML="Camisetas";
+						document.title+=" | Camisetas"
 						break;
 					case 1:
 						titulo.innerHTML="Zapatillas";
+						document.title+=" | Zapatillas"
 						break;
 					case 2:
 						titulo.innerHTML="Regalos";
+						document.title+=" | Regalos"
 						break;
 					default:
 						window.location.replace("index.html")

@@ -1,40 +1,40 @@
 // array de los productos de la tienda
 var productos=[
-	[//camietas: "ruta","nombre", precio, "talla"
-		["img/camisetas/camisetas1.jpg","This is what a gamer dad looks like",18.95,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas2.jpeg","Vacuum Tube T-Shirt",8.95,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas3.jpg","Funtie",18.99,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas4.jpg","GIFTS OF HOPE: T-shirt",15.00,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas5.webp","I love New York",10.98,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas6.jpeg","I'm only talking to my dog",22.99,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas7.jpeg","World's best mom",22.99,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas8.jpg","Camiseta de pez",22.99,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas9.jpg","Cool dude",22.99,["XS","S","M","L","XL","XXL","XXXL"]],
-		["img/camisetas/camisetas10.jpg","Camiseta Independencia de Israel",22.99,["XS","S","M","L","XL","XXL","XXXL"]],
+	[//camietas: "ruta"						,"nombre"								,precio	,"talla"
+		["img/camisetas/camisetas1.jpg"		,"This is what a gamer dad looks like"	,18.95	,["XS","S","M","L","XL","XXL","XXXL"]],
+		["img/camisetas/camisetas2.jpeg"	,"Vacuum Tube T-Shirt"					,8.95	,["XS","S","M","L","XL","XXL"]],
+		["img/camisetas/camisetas3.jpg"		,"Funtie"								,18.99	,["XS","S","M","L","XL","XXL","XXXL"]],
+		["img/camisetas/camisetas4.jpg"		,"GIFTS OF HOPE: T-shirt"				,15.00	,["M","L","XL","XXL"]],
+		["img/camisetas/camisetas5.webp"	,"I love New York"						,10.98	,["S","M","L","XL","XXL","XXXL"]],
+		["img/camisetas/camisetas6.jpeg"	,"I'm only talking to my dog"			,22.99	,["XS","S","M","L","XL","XXL","XXXL"]],
+		["img/camisetas/camisetas7.jpeg"	,"World's best mom"						,22.99	,["XS","S","M","L","XL","XXL","XXXL"]],
+		["img/camisetas/camisetas8.jpg"		,"Camiseta de pez"						,22.99	,["XS","S","M","XL","XXL"]],
+		["img/camisetas/camisetas9.jpg"		,"Cool dude"							,22.99	,["XS","S","M","L","XL","XXXL"]],
+		["img/camisetas/camisetas10.jpg"	,"Camiseta Independencia de Israel"		,22.99	,["XS","S","L","XL","XXL","XXXL"]],
 	],
-	[//zapatillas: "ruta","nombre", precio, talla
-		["img/zapatillas/zapatillas1.jpeg","Converse",65.55,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas2.jpeg","Vans Old Skool",100.55,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas3.jpeg","Adidas Superstar",300.20,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas4.jpeg","Botas Round Toe",605.52,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas5.jpeg","Sperry Angelfish",605.60,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas6.jpeg","Crocks del chino",605.41,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas7.jpeg","Nike Foot on Mars",605.22,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas8.jpeg","Adidas Boat Climacool Lace Water Shoe",605.32,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas9.jpeg","Zapatillas 9",605.42,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
-		["img/zapatillas/zapatillas10.jpeg","Zapatillas 10",650.90,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]]
+	[//zapatillas: "ruta"					,"nombre"								,precio	,talla
+		["img/zapatillas/zapatillas1.jpeg"	,"Converse"								,65.55	,[34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas2.jpeg"	,"Vans Old Skool"						,100.55	,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas3.jpeg"	,"Adidas Superstar"						,300.20	,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas4.jpeg"	,"Botas Round Toe"						,65.52	,[31,31.5,32,32.5,33,33.5,34,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas5.jpeg"	,"Sperry Angelfish"						,35.60	,[33,33.5,34,34.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas6.jpeg"	,"Crocks"								,45.41	,[32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas7.jpeg"	,"Nike Foot on Mars"					,85.22	,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]],
+		["img/zapatillas/zapatillas8.jpeg"	,"Adidas Boat Climacool Lace Water Shoe",105.32	,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5]],
+		["img/zapatillas/zapatillas9.jpeg"	,"Zapatos de bebe Personalizados"							,605.42	,[31,31.5,32,32.5,33,33.5,34,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39,39.5,40,40.5,41]],
+		["img/zapatillas/zapatillas10.jpeg"	,"Zapatillas 10"						,650.90	,[36.5,37,37.5,38,38.5,39,39.5,40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45,45.5,46,46.5,47,47.5]]
 	],
-	[//regalos: "ruta","nombre", precio
-		["img/regalos/regalos1.jpg","Whiski Star Wars",65],
-		["img/regalos/regalos2.jpg","Taza Mounstro de las galletas",65],
-		["img/regalos/regalos3.jpg","Soporte de madera para gafas",65],
-		["img/regalos/regalos4.jpg","Mini dron",65],
-		["img/regalos/regalos5.jpg","regalos 5",65],
-		["img/regalos/regalos6.jpg","Mandos para jugar",65],
-		["img/regalos/regalos7.jpeg","Protector de movil",65],
-		["img/regalos/regalos8.jpeg","Lote de productos Pamper and Revive",65],
-		["img/regalos/regalos9.jpeg","Zapatos de bebe Personalizados",65],
-		["img/regalos/regalos10.jpeg","Decoración de Musgo",65]
+	[//regalos: "ruta"						,"nombre"								,precio
+		["img/regalos/regalos1.jpg"			,"Whiski Star Wars"						,65],
+		["img/regalos/regalos2.jpg"			,"Taza Mounstro de las galletas"		,65],
+		["img/regalos/regalos3.jpg"			,"Soporte de madera para gafas"			,65],
+		["img/regalos/regalos4.jpg"			,"Mini dron"							,65],
+		["img/regalos/regalos5.jpg"			,"Limpiador de teclado"					,65],
+		["img/regalos/regalos6.jpg"			,"Mandos para jugar"					,65],
+		["img/regalos/regalos7.jpeg"		,"Protector de movil"					,65],
+		["img/regalos/regalos8.jpeg"		,"Lote de productos Pamper and Revive"	,65],
+		["img/regalos/regalos9.jpeg"		,"Limpiador supersonico de gafas"		,65],
+		["img/regalos/regalos10.jpeg"		,"Decoración de Musgo"					,65]
 	]
 ];
 
@@ -105,10 +105,17 @@ function creacionMenu(){
 	zapatillas.appendChild(zapatillasenlace);
 	zapatillasenlace.href="catalogo.html?cat=1";
 
+	// var contacto= document.createElement("li");
+	// var contactoenlace=document.createElement("a");
+	// contactoenlace.innerHTML="Contacto";
+	// contacto.appendChild(contactoenlace);
+	// contactoenlace.href="contacto.html";
+
 	lista.appendChild(index);
 	lista.appendChild(regalos);
 	lista.appendChild(camiseta);
 	lista.appendChild(zapatillas);
+	//lista.appendChild(contacto);
 
 	navegador.appendChild(lista);
 
@@ -152,7 +159,19 @@ function contacto(){
 	
 	document.body.appendChild(mensaje)
 }
-
+/*
+	Recibe: nada
+	Devuelve: nada
+	Accion: Pone el favicon en las paginas
+*/
+function cabeza(){
+	var favicon=document.createElement("link");
+	favicon.rel="icon";
+	favicon.href="img/favicon.ico";
+	favicon.type="image/x-icon";
+	document.head.appendChild(favicon)
+}
 
 contacto();
-creacionMenu()
+creacionMenu();
+cabeza();

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Atipiko Web Store</title>
+		<title>Atipiko</title>
 		<meta name="description" content="Atipiko es una tienda de productos poco usuales, llevan operando por años en el centro de Barcelona y han decidido dar su paso al mundo virtual." />
 		<meta name="author" content="Raul Osuna Montes" />
 		<link rel="stylesheet" href="general.css">  
@@ -88,11 +88,13 @@
 
 		<script type="text/javascript">
 			catalogo();
-
+			
 			/*
 				Accion: Muestra la imagen y la informacion del producto seleccionado anteriormente
 			*/
 			function catalogo(){
+
+
 				var principal=document.querySelector("main");
 				var seccion=document.createElement("section");
 				var articulo1=document.createElement("article");
@@ -134,6 +136,7 @@
 			 	precio.innerHTML=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][2].toFixed(2)+"€";
 				titulo.innerHTML=productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][1]
 				
+				document.title+=" | "+ productos[parseInt(getParameterByName("cat"))][parseInt(getParameterByName("pro"))][1]
 
 			}
 		</script>
